@@ -18,9 +18,9 @@ function App() {
   }
   return (
     <div className="App">
-      <Main title={title1} handleButtonClick={alertName}/>
+      <Main  handleButtonClick={alertName}/>
       <Main title={title2} handleButtonClick={acceptInput}/>
-
+      <Main  title ={"Example"}handleButtonClick={alertName}/>
     </div>
   );
 }

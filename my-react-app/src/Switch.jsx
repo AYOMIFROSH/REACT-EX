@@ -12,7 +12,7 @@ import React from "react";
 //export default Main;
 
 
-const Main = ({title, handleButtonClick}) => {
+const Main = ({title = "Hello", handleButtonClick}) => {
   const [name, setName] = React.useState("");
   const handleSumbmit = (event) => {
       event.preventDefault()
@@ -42,5 +42,6 @@ const Main = ({title, handleButtonClick}) => {
       </React.Fragment>
   )
 }
+
 
 export default Main
