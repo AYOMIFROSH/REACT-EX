@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 
 //const rrtrsty = () => {
   //return (
@@ -12,7 +13,7 @@ import React from "react";
 //export default Main;
 
 
-const Main = ({title = "Hello", handleButtonClick}) => {
+const Main = ({title = "Hello", handleButtonClick, hasSubmitButton}) => {
   const [name, setName] = React.useState("");
   const handleSumbmit = (event) => {
       event.preventDefault()
@@ -36,12 +37,16 @@ const Main = ({title = "Hello", handleButtonClick}) => {
               }}>Submit</button>
           </form>
           <p>My First Paragraph</p>
+          {hasSubmitButton && 
           <button onClick={() =>
             handleButtonClick(name)
-          }>Click Me</button>
+          }>Click Me</button>}
       </React.Fragment>
   )
 }
-
+Main.propTypes = {
+  title: PropTypes.string,
+  handleButtonClick: PropTypes.func
+}
 
 export default Main
